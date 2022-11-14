@@ -1,14 +1,22 @@
-import {NextPage} from "next";
+import {GetStaticPropsResult, NextPage} from "next";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
 
-const About: NextPage = function About() {
+type Props = {
+  value: string;
+}
+
+export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
+  return {
+    props: {
+      value: 'Awesome!',
+    },
+  }
+}
+
+const About: NextPage<Props> = function About({ value }) {
   return (
     <div className={styles.container}>
-      <h1>About</h1>
-      <p>
-        <Link href={"/"}>About</Link>
-      </p>
+      <h1>About {value}</h1>
     </div>
   );
 }

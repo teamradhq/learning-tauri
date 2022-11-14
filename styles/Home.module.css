@@ -2,14 +2,34 @@
   padding: 0 2rem;
 }
 
-.main {
+.page {
   min-height: 100vh;
   padding: 4rem 0;
-  flex: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.nav {
+  flex: 0 0 15rem;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  list-style-type: none;
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+}
+.nav li {
+  padding: 0.25rem;
+}
+
+.main {
+  flex: 1;
 }
 
 .footer {
