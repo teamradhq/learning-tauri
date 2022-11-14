@@ -1,6 +1,6 @@
 import { invoke } from '@tauri-apps/api/tauri'
 import Head from 'next/head'
-import Image from 'next/image'
+import Link from 'next/link'
 import {NextPage} from "next";
 import {useEffect, useState} from "react";
 
@@ -30,6 +30,10 @@ const Home:NextPage = function Home() {
         <h1 className={styles.title}>
           { greet }
         </h1>
+
+        <p>
+          <Link href={"/about"}>About</Link>
+        </p>
 
         <p className={styles.description}>
           Get started by editing{' '}
